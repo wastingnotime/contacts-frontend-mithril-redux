@@ -1,11 +1,8 @@
 import "./style.css"
-
 import m from "mithril"
-
 import ContactList from "./views/ContactList"
 import ContactForm from "./views/ContactForm"
 import Layout from "./views/Layout"
-
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import reducer from './reducers'

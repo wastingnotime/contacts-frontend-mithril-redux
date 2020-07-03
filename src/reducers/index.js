@@ -14,14 +14,15 @@ export default (state = initialState, action) => {
         case CREATE_CONTACT:
             return ({ current: {}, contacts: [...state.contacts, action.payload] })
         case DELETE_CONTACT:
-            return ({ current: {}, contacts: state.contacts.filter(contact => contact.id !== action.payload.id) })
+            return ({ ...state, contacts: state.contacts.filter(contact => contact.id !== action.payload.id) })
         case UPDATE_CONTACT:
-            let index = state.contacts.findIndex(c => c.id === action.payload.id)
-            return ({ current: {}, contacts: [...state.contacts.slice(0, index), action.payload, ...state.contacts.slice(index + 1)] })
+            let contacts = [...state.contacts]
+            contacts[contacts.findIndex(c => c.id === action.payload.id)] = action.payload
+            return ({ current: {}, contacts })
         case GET_ALL_CONTACTS:
-            return ({ current: {}, contacts: action.payload })
+            return ({ ...state, contacts: action.payload })
         case GET_CONTACT:
-            return ({ current: action.payload, contacts: state.contacts })
+            return ({ ...state, current: action.payload })
         default:
             return state
     }
