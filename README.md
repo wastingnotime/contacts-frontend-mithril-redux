@@ -1,33 +1,69 @@
 # contacts-frontend-mithril-redux
 
-## Getting start
+Part of contacts project that aim for a benchmark thought technologies.
 
+## what is it for?
+
+This project validates:
+* frontend
+* mithriljs
+* redux
+
+
+## depencencies
+* docker 25+
+* nvm 0.39+
+
+## getting started
+
+open another terminal and run the backend for this project
+```
+docker run -p 8010:8010 wastingnotime/contacts-backend:latest
+```
+
+set node version (v21+)
+```
+nvm use
+```
 
 install deps
 ```
 npm i
 ```
 
-start frontend app
+start app
 ```
 npm start
 ```
 
-start proxy 
+* just go to your browser on http://localhost:1234
+
+
+## validating docker image locally
+
+build
 ```
-docker-compose up
+docker build --tag contacts.frontend.mithril.redux .
 ```
-*note: proxy working at http://localhost:8080 thats redirects calls to front-end at http://localhost:1234 and to test api container at http://api:80
 
+run
+```
+docker run -p 80:80 contacts.frontend.mithril.redux
+```
 
-## tips
+## some tips
 
-### upgrade packages
+### upgrade node packages
 
+verify outdated packages
 ```
 npm outdated
 ```
-
+install new version of outdated package
 ```
 npm install <package>@latest
+```
+if npm is older use
+```
+nvm install-latest-npm
 ```
