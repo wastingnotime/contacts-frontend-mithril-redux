@@ -1,13 +1,16 @@
 import m from 'mithril'
 import { createContactSuccess, updateContactSuccess, deleteContactSuccess, getAllContactsSuccess, getContactSuccess } from './internal'
 
-const API_URL = '/contacts'
+const API_URL = '/api/contacts'
 
 /* side effects */
 export const createContact = contact =>
     dispatch =>
-    call({ method: "POST", url: API_URL, body: contact })
-    .then(response => dispatch(createContactSuccess(response)))
+    call({ method: "POST", url: API_URL, body: contact, extract: xhr => xhr.getResponseHeader('Location')})
+    .then(response => {
+        contact.id = response.substring(response.lastIndexOf('/') + 1)
+        dispatch(createContactSuccess(contact))
+    })
 
 export const updateContact = (contact) =>
     dispatch =>
