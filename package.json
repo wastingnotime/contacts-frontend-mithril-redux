@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henriquericcio/contacts-frontend-mithril-redux.git"
+    "url": "git+https://github.com/wastingnotime/contacts-frontend-mithril-redux.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/henriquericcio/contacts-frontend-mithril-redux/issues"
+    "url": "https://github.com/wastingnotime/contacts-frontend-mithril-redux/issues"
   },
-  "homepage": "https://github.com/henriquericcio/contacts-frontend-mithril-redux#readme",
+  "homepage": "https://github.com/wastingnotime/contacts-frontend-mithril-redux#readme",
   "dependencies": {
     "mithril": "^2.2.2",
     "redux": "^5.0.1",
