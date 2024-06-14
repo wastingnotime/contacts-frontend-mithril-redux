@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/henriquericcio/contacts-frontend-mithril-redux#readme",
   "dependencies": {
-    "mithril": "^2.0.4",
-    "redux": "^4.1.2",
-    "redux-thunk": "^2.4.1"
+    "mithril": "^2.2.2",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
-    "parcel": "^2.1.1"
+    "parcel": "^2.12.0"
   }
 }
