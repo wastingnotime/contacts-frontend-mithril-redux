@@ -7,7 +7,7 @@ dist
 .gitignore
 .jsbeautifyrc
 .jshintrc
-Dockerfile
+dockerfile
 README.md
-proxy
 .dockerignore
+.idea
