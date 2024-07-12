@@ -1,13 +1,31 @@
+# node stuff
 node_modules
 npm-debug.log
+
+# parcel
 .parcel-cache
-.vscode
 dist
+
+# git
 .git
 .gitignore
+
+# dev
 .jsbeautifyrc
 .jshintrc
+.nvmrc
+.proxyrc
+
+# docker
 dockerfile
-README.md
 .dockerignore
+
+# misc
+README.md
+
+# ide's
+.vscode
 .idea
+
+# pipeline's
+.github
