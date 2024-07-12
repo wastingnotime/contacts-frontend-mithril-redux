@@ -6,11 +6,8 @@ const API_URL = '/api/contacts'
 /* side effects */
 export const createContact = contact =>
     dispatch =>
-    call({ method: "POST", url: API_URL, body: contact, extract: xhr => xhr.getResponseHeader('Location')})
-    .then(response => {
-        contact.id = response.substring(response.lastIndexOf('/') + 1)
-        dispatch(createContactSuccess(contact))
-    })
+    call({ method: "POST", url: API_URL, body: contact , extract: extractId})
+    .then(id => dispatch(createContactSuccess({ ...contact, id}))    )
 
 export const updateContact = (contact) =>
     dispatch =>
@@ -32,5 +29,9 @@ export const getContact = id =>
     call({ method: "GET", url: `${API_URL}/${id}` })
     .then(response => dispatch(getContactSuccess(response)))
 
-
 const call = option => m.request(option).catch(error => { throw (error) })
+
+const extractId = xhr => {
+    let location = xhr.getResponseHeader("Location")
+    return location.substring(location.lastIndexOf('/') + 1)
+};

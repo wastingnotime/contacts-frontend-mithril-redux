@@ -9,7 +9,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     if (!isProduction)
-        console.log(action)
+        console.log("reducer:", action)
     switch (action.type) {
         case CREATE_CONTACT:
             return ({ current: {}, contacts: [...state.contacts, action.payload] })
