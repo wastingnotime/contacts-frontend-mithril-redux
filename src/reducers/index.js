@@ -1,15 +1,11 @@
 import { GET_ALL_CONTACTS, GET_CONTACT, CREATE_CONTACT, UPDATE_CONTACT, DELETE_CONTACT } from '../actions/types'
 
-const isProduction = process.env.NODE_ENV === 'production'
-
 const initialState = {
     current: {},
     contacts: []
 }
 
 export default (state = initialState, action) => {
-    if (!isProduction)
-        console.log("reducer:", action)
     switch (action.type) {
         case CREATE_CONTACT:
             return ({ current: {}, contacts: [...state.contacts, action.payload] })
