@@ -19,7 +19,7 @@
 
 ### execute from source code 
 
-as a prerequisite it is necessary to start the backend application
+as a prerequisite, it is necessary to start the backend application
 
 open another terminal and run the backend for this project
 ```
