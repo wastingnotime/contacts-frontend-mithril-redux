@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/wastingnotime/contacts-frontend-mithril-redux#readme",
   "dependencies": {
-    "mithril": "^2.3.3",
+    "mithril": "^2.3.8",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
-    "parcel": "^2.15.4"
+    "parcel": "^2.16.3"
   }
 }
